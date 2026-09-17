@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Inspired Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>AI-Inspired Algorithms</h1>
+            <p>Optimization Techniques and Applications</p>
+        </div>
+        <nav class="main-nav">
+            <button class="nav-btn active" data-page="home">HOME</button>
+            <button class="nav-btn" data-page="routing">ROUTING</button>
+            <button class="nav-btn" data-page="applications">APPLICATIONS</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home-page" class="page active">
+            <div class="hero">
+                <h2>AI-Inspired Algorithms</h2>
+                <p>Optimization problems involve finding the best solution from many possible choices. In this project, AI-inspired algorithms are used to search for high-quality solutions efficiently.
+                    The system allows users to generate or load problem data, select an optimization algorithm, configure its parameters, run the algorithm, and view the final results through tables, charts, and visualizations.
+                    This system demonstrates how AI-inspired optimization algorithms can discover efficient solutions for real-world decision-making problems. Explore routing as the main application, along with scheduling, timetabling, and feature selection.
+                </p>
+            </div>
+
+
+            <div class="algorithms-section">
+                <div class="section-heading">
+                    <span class="section-label">ALGORITHM LIBRARY</span>
+                    <h3>Optimization Algorithms</h3>
+                </div>
+
+                <div class="algorithm-grid">
+                    <div class="algorithm-card">
+                        <span class="algorithm-code">GA</span>
+                        <h3>Genetic Algorithm</h3>
+                        <p>It is inspired by natural evolution. It creates a population of possible solutions and improves them over generations using selection, crossover, and mutation to find the best solution.</p>
+                    </div>
+
+                    <div class="algorithm-card">
+                        <span class="algorithm-code">SA</span>
+                        <h3>Simulated Annealing</h3>
+                        <p>It is inspired by the cooling process of metals. It gradually improves a solution and may temporarily accept a worse solution to avoid getting stuck in a local optimum.</p>
+                    </div>
+
+                    <div class="algorithm-card">
+                        <span class="algorithm-code">ACO</span>
+                        <h3>Ant Colony Optimization</h3>
+                        <p>It is inspired by ants finding short paths to food using pheromone trails. Artificial ants build solutions, and better routes receive stronger pheromone values, guiding later ants toward efficient paths. It is a metaheuristic particularly suited to difficult combinatorial problems.</p>
+                    </div>
+
+                    <div class="algorithm-card">
+                        <span class="algorithm-code">PSO</span>
+                        <h3>Particle Swarm Optimization</h3>
+                        <p>It is inspired by the movement of bird flocks and fish schools. Each particle represents a possible solution and moves by learning from its own best result and the swarm’s best result.</p>
+                    </div>
+
+                    <div class="algorithm-card">
+                        <span class="algorithm-code">ABC</span>
+                        <h3>Artificial Bee Colony</h3>
+                        <p>It is inspired by honey bees searching for food. Candidate solutions are treated as food sources: employed bees explore nearby solutions, onlooker bees choose promising sources, and scout bees explore new random areas when a source is not improving.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="applications-intro">
+                <div class="section-heading">
+                    <span class="section-label">APPLICATION AREAS</span>
+                    <h3>Where Can These Algorithms Be Used?</h3>
+                </div>
+
+                <div class="application-preview">
+                    <div>
+                        <strong>Routing</strong>
+                        <p>It solves a Traveling Salesman Problem–style task: find the shortest possible route that visits all selected cities or locations exactly once and returns to the starting point.</p>
+                    </div>
+
+                    <div>
+                        <strong>Scheduling</strong>
+                        <p>Arrange tasks or jobs in an efficient order based on processing time and priority. The result is displayed as an optimized schedule and Gantt chart.</p>
+                    </div>
+
+                    <div>
+                        <strong>Timetabling</strong>
+                        <p>Assign classes, teachers, and time slots while minimizing conflicts. The system generates an optimized timetable in a clear grid format.</p>
+                    </div>
+
+                    <div>
+                        <strong>Feature Selection</strong>
+                        <p>Select the most relevant features from a dataset to reduce complexity and improve model performance. The result shows selected features, relevance, and optimization fitness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="routing-page" class="page">
+            <div class="page-header">
+                <div>
+                    <span class="section-label">Routing Optimization - Find efficient routes using AI-inspired optimization algorithms.</span> <br>
+                    <h4>Routing Constraints</h4>
+                    <p>
+                        • The route must start from the selected starting city/location. <br>
+                        • Every city/location must be visited exactly once. <br>
+                        • A city/location cannot be visited again before the route is completed. <br>
+                        • The route must return to the starting city/location. <br>
+                        • The route must form one complete connected tour. <br>
+                        • The algorithm should minimize the total travel distance. <br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="routing-layout">
+                <aside class="routing-sidebar">
+                    <button class="routing-menu active" data-routing-section="network">Network & Algorithms</button>
+                    <button class="routing-menu" data-routing-section="comparison">Comparison</button>
+                    <button class="routing-menu" data-routing-section="performance">Performance Analysis</button>
+                </aside>
+
+                <div class="routing-content">
+                    <div id="network-section" class="routing-section active">
+                        <div class="section-heading">
+                            <span class="section-label">NETWORK CONFIGURATION</span>
+                            <h3>Network & Algorithms</h3>
+                        </div>
+
+                        <div class="routing-top-layout">
+                            <div class="routing-left-column">
+                                <div class="panel">
+                                    <div class="panel-title">
+                                        <h3>Network Configuration</h3>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="city-count">Number of Cities</label>
+                                        <input type="number" id="city-count" min="2" max="69" value="5">
+                                        <small>Dataset contains 70 locations. ID 50 is used as the fixed source.</small>
+                                    </div>
+
+                                    <button class="primary-btn" id="generate-cities">Load Network</button>
+                                </div>
+
+                                <div class="panel selected-locations-panel">
+                                    <div class="panel-title">
+                                        <h3 id="selected-locations-toggle">Selected Locations <span id="selected-locations-arrow">▼</span></h3>
+                                    </div>
+
+                                    <div class="table-container" id="selected-locations-content">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Node</th>
+                                                    <th>Latitude</th>
+                                                    <th>Longitude</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="cities-table">
+                                                <tr>
+                                                    <td colspan="3">No locations selected</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-title">
+                                <h3>Dataset Network</h3>
+                            </div>
+
+                            <div class="network-area" id="network-area">
+                                <p>Select the number of cities and load the dataset.</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-title">
+                                <h3>Algorithm Configuration</h3>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="routing-algorithm">Select Algorithm</label>
+                                    <select id="routing-algorithm">
+                                        <option value="GA">Genetic Algorithm</option>
+                                        <option value="SA">Simulated Annealing</option>
+                                        <option value="ACO">Ant Colony Optimization</option>
+                                        <option value="PSO">Particle Swarm Optimization</option>
+                                        <option value="ABC">Artificial Bee Colony</option>
+                                    </select>
+                            </div>
+                            <button class="primary-btn" id="run-routing">Run Algorithm</button>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-title">
+                                <h3>Routing Result</h3>
+                            </div>
+
+                            <div class="routing-result-details">
+                                <div class="result-row">
+                                    <span>Best Route</span>
+                                    <strong id="routing-result">—</strong>
+                                </div>
+
+                                <div class="result-row">
+                                    <span>Distance</span>
+                                    <strong id="routing-distance">—</strong>
+                                </div>
+
+                                <div class="result-row">
+                                    <span>Fitness</span>
+                                    <strong id="routing-fitness">—</strong>
+                                </div>
+
+                                <div class="result-row">
+                                    <span>Execution Time</span>
+                                    <strong id="routing-time">—</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="comparison-section" class="routing-section">
+                        <div class="section-heading">
+                            <span class="section-label">ALGORITHM COMPARISON</span>
+                            <h3>Comparison</h3>
+                        </div>
+
+                        <div class="panel">
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Algorithm</th>
+                                            <th>Distance</th>
+                                            <th>Execution Time</th>
+                                            <th>Fitness</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="routing-comparison-table">
+                                        <tr>
+                                            <td>GA</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>SA</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ACO</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>PSO</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ABC</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="chart-grid">
+                            <div class="panel">
+                                <h3>Distance Comparison</h3>
+                                <div id="distance-chart" class="chart-area"></div>
+                            </div>
+
+                            <div class="panel">
+                                <h3>Execution Time Comparison</h3>
+                                <div id="time-chart" class="chart-area"></div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-title">
+                                <h3>Convergence Analysis</h3>
+                            </div>
+
+                            <div id="convergence-chart" class="large-chart">
+                                <p>Run the comparison to generate convergence analysis.</p>
+                            </div>
+                        </div>
+
+                        <div class="panel comparison-conclusion-panel">
+                            <div class="panel-title">
+                                <h3>Conclusion</h3>
+                            </div>
+
+                            <div id="comparison-conclusion" class="comparison-conclusion">
+                                Run the comparison to generate the conclusion.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="performance-section" class="routing-section">
+                        <div class="section-heading">
+                            <span class="section-label">PERFORMANCE ANALYSIS</span>
+                            <h3>Performance & Analysis</h3>
+                        </div>
+
+                        <div class="panel performance-controls">
+                            <div class="form-group">
+                                <label for="performance-algorithm">Select Algorithm</label>
+
+                                <select id="performance-algorithm">
+                                    <option value="GA">Genetic Algorithm</option>
+                                    <option value="SA">Simulated Annealing</option>
+                                    <option value="ACO">Ant Colony Optimization</option>
+                                    <option value="PSO">Particle Swarm Optimization</option>
+                                    <option value="ABC">Artificial Bee Colony</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="performance-parameter">Select Parameter</label>
+
+                                <select id="performance-parameter">
+                                    <option value="population_size">Population Size</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="performance-values">Parameter Values</label>
+                                <input type="text" id="performance-values" placeholder="Enter comma-separated values">
+                            </div>
+
+                            <button class="primary-btn" id="run-performance">
+                                Run Analysis
+                            </button>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-title">
+                                <h3>Sensitivity Results</h3>
+                            </div>
+
+                            <div id="sensitivity-content" class="analysis-area">
+                                Select an algorithm and run the analysis.
+                            </div>
+                        </div>
+
+                        <div class="chart-grid">
+                            <div class="panel">
+                                <div class="panel-title">
+                                    <h3>Distance vs Parameter</h3>
+                                </div>
+
+                                <div id="sensitivity-distance-chart" class="chart-area">
+                                    <p>Select an algorithm and run the analysis.</p>
+                                </div>
+                            </div>
+
+                            <div class="panel">
+                                <div class="panel-title">
+                                    <h3>Execution Time vs Parameter</h3>
+                                </div>
+
+                                <div id="sensitivity-time-chart" class="chart-area">
+                                    <p>Select an algorithm and run the analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications-page" class="page">
+            <div class="page-header">
+                <div>
+                    <span class="section-label">APPLICATIONS</span>
+                    <h2>Optimization Applications</h2>
+                    <p>This section demonstrates how AI-inspired optimization algorithms can be applied to real-world decision-making problems. Select an application to generate or enter problem data, choose an algorithm, configure its parameters, and obtain an optimized solution with performance metrics and visual results. </p>
+                </div>
+            </div>
+
+                        <div class="working-of-apps">
+                            <h2>How This Applications Tab Works</h2>
+
+                            <div class="workflow-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Choose an Application</h3>
+                                    <p>Select one of the available optimization applications.</p>
+                                </div>
+                            </div>
+
+                            <div class="workflow-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Explore the Given Problem</h3>
+                                    <p>Start with the predefined problem and inputs provided for the selected application.</p>
+                                </div>
+                            </div>
+
+                            <div class="workflow-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Customize the Inputs</h3>
+                                    <p>Edit, remove or add inputs to test different problem configurations.</p>
+                                </div>
+                            </div>
+
+                            <div class="workflow-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Select & Optimize</h3>
+                                    <p>Choose GA, SA, ACO, PSO or ABC and run the selected algorithm.</p>
+                                </div>
+                            </div>
+
+                            <div class="workflow-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h3>Analyze the Results</h3>
+                                    <p>View the optimized solution and examine the fitness, execution time and other results.</p>
+                                </div>
+                            </div>
+
+                            <div class="workflow-step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">
+                                    <h3>Click & Explore</h3>
+                                    <p>Following are the Applicaitons</p>
+                                </div>
+                            </div>
+                        </div>
+            <div class="application-buttons">
+                <button class="application-btn active" data-application="scheduling">
+                    <span class="application-number">01</span>
+                    <div>
+                        <h3>Scheduling</h3>
+                        <p>Optimize the order and allocation of jobs.</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button class="application-btn" data-application="feature-selection">
+                    <span class="application-number">02</span>
+                    <div>
+                        <h3>Feature Selection</h3>
+                        <p>Identify the most relevant features from a dataset.</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </button>
+
+                <button class="application-btn" data-application="timetabling">
+                    <span class="application-number">03</span>
+                    <div>
+                        <h3>Timetabling</h3>
+                        <p>Generate optimized schedules while satisfying constraints.</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+
+            <div id="application-workspace" class="application-workspace">
+                <div id="scheduling-workspace" class="application-work hidden">
+                    <div class="page-header">
+                        <div>
+                            <span class="section-label">SCHEDULING OPTIMIZATION</span>
+                            <h3>Scheduling Constraints</h3>
+                            <p>
+                                • Each task must be scheduled exactly once. <br>
+                                • Only one task can be processed at a time (single-machine scheduling). <br>
+                                • A task cannot start before the previous task is completed. <br>
+                                • Processing time for every task must be considered. <br>
+                                • Higher-priority tasks should be scheduled earlier where possible. <br>
+                                • The algorithm should minimize total completion time and scheduling delay.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Tasks / Jobs</h3>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Task / Job</th>
+                                        <th>Processing Time</th>
+                                        <th>Priority</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="jobs-table">
+                                    <tr><td colspan="4">Loading tasks...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="job-input-area">
+                            <button type="button" class="primary-btn" id="add-job-btn">
+                                Add Task
+                            </button>
+
+                            <div id="add-job-form" class="add-job-form" style="display: none;">
+                                <input
+                                    type="text"
+                                    id="job-id-input"
+                                    placeholder="Job Name"
+                                >
+
+                                <input
+                                    type="number"
+                                    id="job-processing-input"
+                                    min="1"
+                                    placeholder="Processing Time"
+                                >
+
+                                <input
+                                    type="number"
+                                    id="job-priority-input"
+                                    min="1"
+                                    placeholder="Priority"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="primary-btn"
+                                    id="save-job-btn"
+                                >
+                                    Save Task
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Algorithm Selection</h3>
+                        </div>
+
+                        <div class="algorithm-options">
+                            <label for="scheduling-algorithm">Select Algorithm</label>
+                            <select id="scheduling-algorithm">
+                                <option value="GA">Genetic Algorithm</option>
+                                <option value="SA">Simulated Annealing</option>
+                                <option value="ACO">Ant Colony Optimization</option>
+                                <option value="PSO">Particle Swarm Optimization</option>
+                                <option value="ABC">Artificial Bee Colony</option>
+                            </select>
+                        </div>
+
+                        <button id="run-scheduling" class="primary-btn">
+                            Optimize Schedule
+                        </button>
+                    </div>
+
+                    <div class="panel">
+                        <div id="scheduling-result">
+                            Optimized schedule will appear here.
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Gantt Chart</h3>
+                        </div>
+
+                        <div id="gantt-chart">
+                            Optimized Gantt chart will appear here.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="feature-selection-workspace" class="application-work hidden">
+                    <div class="section-heading">
+                        <span class="section-label">FEATURE SELECTION OPTIMIZATION</span>
+                        <h3>Feature Selection Optimization</h3>
+                    </div>
+
+                    <div class="feature-selection-top">
+                        <div class="panel">
+                            <div class="panel-title">
+                                <h3>Problem Statement</h3>
+                            </div>
+                            <div class="problem-display">
+                                <span>Student Performance Prediction</span>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-title">
+                                <h3>Feature Selection Constraints</h3>
+                            </div>
+
+                            <p>
+                                • Each feature can either be selected or not selected.<br>
+                                • At least one feature must be selected.<br>
+                                • Feature relevance must be considered.<br>
+                                • The number of selected features is considered.<br>
+                                • Unnecessarily selecting many features is penalized.<br>
+                                • Redundancy between selected features is penalized.<br>
+                                • The selected feature subset is evaluated using a fitness function.<br>
+                                • The algorithm aims to maximize relevant features while minimizing subset size and redundancy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Features Taken</h3>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Feature Name</th>
+                                        <th>Relevance</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="feature-list"></tbody>
+                            </table>
+                        </div>
+
+                        <div class="feature-input-area">
+                            <button
+                                type="button"
+                                class="primary-btn"
+                                id="add-feature-btn"
+                            >
+                                Add Feature
+                            </button>
+
+                            <div id="add-feature-form" class="add-job-form" style="display: none;">
+                                <input type="text" id="feature-name-input" placeholder="Feature Name">
+                                <input type="number" id="feature-relevance-input" min="0" max="1" step="0.01" placeholder="Relevance (0-1)">
+                                <button type="button" class="primary-btn" id="save-feature-btn">Save Feature</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Algorithm Selection</h3>
+                        </div>
+
+                        <div class="algorithm-options">
+                            <label for="feature-algorithm">
+                                Select Algorithm
+                            </label>
+
+                            <select id="feature-algorithm">
+                                <option value="GA">Genetic Algorithm</option>
+                                <option value="SA">Simulated Annealing</option>
+                                <option value="ACO">Ant Colony Optimization</option>
+                                <option value="PSO">Particle Swarm Optimization</option>
+                                <option value="ABC">Artificial Bee Colony</option>
+                            </select>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            id="run-feature-selection"
+                        >
+                            Optimize Features
+                        </button>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Result</h3>
+                        </div>
+
+                        <div class="feature-result-summary">
+                            <div class="result-row">
+                                <span>Algorithm</span>
+                                <strong id="feature-result-algorithm">—</strong>
+                            </div>
+
+                            <div class="result-row">
+                                <span>Total Features</span>
+                                <strong id="feature-result-total">—</strong>
+                            </div>
+
+                            <div class="result-row">
+                                <span>Selected Features</span>
+                                <strong id="feature-result-selected">—</strong>
+                            </div>
+
+                            <div class="result-row">
+                                <span>Fitness</span>
+                                <strong id="feature-result-fitness">—</strong>
+                            </div>
+
+                            <div class="result-row">
+                                <span>Redundancy</span>
+                                <strong id="feature-result-redundancy">—</strong>
+                            </div>
+
+                            <div class="result-row">
+                                <span>Execution Time</span>
+                                <strong id="feature-result-time">—</strong>
+                            </div>
+                        </div>
+
+                        <div class="feature-reason">
+                            <p id="feature-reason-text">
+                                Feature selection results will appear here.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="timetabling-workspace" class="application-work hidden">
+                    <div class="page-header">
+                        <div>
+                            <span class="section-label">TIMETABLING OPTIMIZATION</span>
+                            <h3>Timetabling</h3>
+                            <p>• A teacher cannot be assigned to more than one class in the same time slot.</p>
+                            <p>• Every class must be assigned a valid time slot.</p>
+                            <p>• Preferred time slots should be considered.</p>
+                            <p>• The algorithm should minimize timetable conflicts.</p>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Generated Classes</h3>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Teacher</th>
+                                        <th>Preferred Slot</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="predefined-classes-table">
+                                    <tr>
+                                        <td>C1</td>
+                                        <td>T1</td>
+                                        <td>Monday 09:00-10:00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>C2</td>
+                                        <td>T1</td>
+                                        <td>Tuesday 10:00-11:00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>C3</td>
+                                        <td>T2</td>
+                                        <td>Wednesday 09:00-10:00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>C4</td>
+                                        <td>T2</td>
+                                        <td>Thursday 11:15-12:15</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>C5</td>
+                                        <td>T2</td>
+                                        <td>Friday 10:00-11:00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>C6</td>
+                                        <td>T2</td>
+                                        <td>Wednesday 09:00-10:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            id="add-class-btn"
+                        >
+                            Add Class
+                        </button>
+
+                        <div
+                            id="add-class-form"
+                            class="hidden"
+                        >
+
+                            <div class="input-row">
+
+                                <label>
+                                    Class
+                                    <input
+                                        type="text"
+                                        id="new-class-id"
+                                        placeholder="C6"
+                                    >
+                                </label>
+
+                                <label>
+                                    Teacher
+                                    <input
+                                        type="text"
+                                        id="new-teacher-id"
+                                        placeholder="T3"
+                                    >
+                                </label>
+
+                                <label>
+                                    Time Slot
+                                    <select id="new-class-slot">
+
+                                        <option value="Monday 09:00-10:00">
+                                            Monday 09:00-10:00
+                                        </option>
+
+                                        <option value="Monday 10:00-11:00">
+                                            Monday 10:00-11:00
+                                        </option>
+
+                                        <option value="Monday 11:15-12:15">
+                                            Monday 11:15-12:15
+                                        </option>
+
+                                        <option value="Tuesday 09:00-10:00">
+                                            Tuesday 09:00-10:00
+                                        </option>
+
+                                        <option value="Tuesday 10:00-11:00">
+                                            Tuesday 10:00-11:00
+                                        </option>
+
+                                        <option value="Tuesday 11:15-12:15">
+                                            Tuesday 11:15-12:15
+                                        </option>
+
+                                        <option value="Wednesday 09:00-10:00">
+                                            Wednesday 09:00-10:00
+                                        </option>
+
+                                        <option value="Wednesday 10:00-11:00">
+                                            Wednesday 10:00-11:00
+                                        </option>
+
+                                        <option value="Wednesday 11:15-12:15">
+                                            Wednesday 11:15-12:15
+                                        </option>
+
+                                        <option value="Thursday 09:00-10:00">
+                                            Thursday 09:00-10:00
+                                        </option>
+
+                                        <option value="Thursday 10:00-11:00">
+                                            Thursday 10:00-11:00
+                                        </option>
+
+                                        <option value="Thursday 11:15-12:15">
+                                            Thursday 11:15-12:15
+                                        </option>
+
+                                        <option value="Friday 09:00-10:00">
+                                            Friday 09:00-10:00
+                                        </option>
+
+                                        <option value="Friday 10:00-11:00">
+                                            Friday 10:00-11:00
+                                        </option>
+
+                                        <option value="Friday 11:15-12:15">
+                                            Friday 11:15-12:15
+                                        </option>
+
+                                    </select>
+                                </label>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="primary-btn"
+                                id="save-class-btn"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Timetable Constraints</h3>
+                        </div>
+
+                        <div class="result-cards">
+
+                            <div class="result-card">
+                                <span>Teacher Conflicts</span>
+                                <strong id="teacher-conflicts">0</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Time Conflicts</span>
+                                <strong id="time-conflicts">0</strong>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Algorithm Selection</h3>
+                        </div>
+
+                        <div class="algorithm-options">
+
+                            <label for="timetabling-algorithm">
+                                Select Algorithm
+                            </label>
+
+                            <select id="timetabling-algorithm">
+
+                                <option value="GA">
+                                    Genetic Algorithm
+                                </option>
+
+                                <option value="SA">
+                                    Simulated Annealing
+                                </option>
+
+                                <option value="ACO">
+                                    Ant Colony Optimization
+                                </option>
+
+                                <option value="PSO">
+                                    Particle Swarm Optimization
+                                </option>
+
+                                <option value="ABC">
+                                    Artificial Bee Colony
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            id="run-timetabling"
+                        >
+                            Optimize Timetable
+                        </button>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Optimized Timetable</h3>
+                        </div>
+
+                        <div
+                            id="timetable-grid"
+                            class="table-container"
+                        >
+                            No optimized timetable available.
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Changed Class Slots</h3>
+                        </div>
+
+                        <div
+                            id="changed-classes"
+                            class="table-container"
+                        >
+                            No classes changed slots.
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h3>Results</h3>
+                        </div>
+
+                        <div class="result-cards">
+
+                            <div class="result-card">
+                                <span>Fitness</span>
+                                <strong id="timetable-fitness">—</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Conflicts</span>
+                                <strong id="timetable-result-conflicts">—</strong>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Execution Time</span>
+                                <strong id="timetable-time">—</strong>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>AI-Inspired Algorithms | Optimization & Analysis Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
