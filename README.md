@@ -17,3 +17,7 @@ Technologies Used are:
 - JavaScript
 - Chart.js
 
+Steps:
+- Clone the repository
+- install dependencies = pip install flask
+- run the applications = python app.py
