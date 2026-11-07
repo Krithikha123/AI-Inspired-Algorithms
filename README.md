@@ -21,3 +21,13 @@ Steps:
 - Clone the repository
 - install dependencies = pip install flask
 - run the applications = python app.py
+
+Working:
+- Select the number of locations.
+- Choose the optimization algorithm.
+- Configure the algorithm parameters.
+- Run the optimization process.
+- View the generated route.
+- Analyze the total distance and execution time.
+- Compare the performance of different algorithms.
+  
