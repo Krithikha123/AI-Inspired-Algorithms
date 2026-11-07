@@ -9,4 +9,11 @@ The project implements the following five optimization algorithms:
 - **Particle Swarm Optimization (PSO)** – Uses a population of particles that move towards better solutions.
 - **Artificial Bee Colony (ABC)** – Simulates the foraging behaviour of honey bees to search for optimized routes.
 
-  
+Technologies Used are:
+- Python
+- Flask
+- HTML
+- CSS
+- JavaScript
+- Chart.js
+
